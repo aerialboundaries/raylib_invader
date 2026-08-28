@@ -17,7 +17,8 @@ int main(void)
   Spaceship ship;
 
   /* spaceship create with graphic path with IMAGE_SPACESHIP */
-  spaceship_create(&ship, (Vector2){0.0f, 0.0f}, IMAGE_SPACESHIP);
+  /* ship is real structure, so, must be initialized by constant value */
+  spaceship_init(&ship, (Vector2){0.0f, 0.0f}, IMAGE_SPACESHIP);
 
   /* calculate position with loaded image size */
   ship.position.x = (GetScreenWidth() - ship.image.width) / 2.0f;

@@ -11,10 +11,13 @@ static void terminate(const char *message)
 }
 
 /* Constructer & Destructer */
-void spaceship_create(Spaceship *ship, Vector2 position, const char *image_path)
+void spaceship_init(Spaceship *ship, Vector2 position, const char *image_path)
 {
   if (ship == NULL) {
     terminate("spaceship cannot be created");
+  }
+  if (image_path == NULL) {
+    terminate("image_path is NULL");
   }
   ship->position = position;
   ship->image = LoadTexture(image_path);

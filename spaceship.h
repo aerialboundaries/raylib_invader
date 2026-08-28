@@ -8,8 +8,7 @@ typedef struct {
 } Spaceship;
 
 /* Constructer & Destructer */
-void spaceship_create(Spaceship *ship, Vector2 position,
-                      const char *image_path);
+void spaceship_init(Spaceship *ship, Vector2 position, const char *image_path);
 void spaceship_destroy(Spaceship *ship);
 
 /* functions */
