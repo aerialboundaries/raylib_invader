@@ -1,0 +1,27 @@
+{
+  "version": 3,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 20,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "w64devkit",
+      "displayName": "w64devkit GCC Build",
+      "description": "Build using GCC from w64devkit",
+      "generator": "MinGW Makefiles",
+      "binaryDir": "${sourceDir}/build/w64devkit",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_C_COMPILER": "C:/raylib/w64devkit/bin/gcc.exe"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "w64devkit",
+      "configurePreset": "w64devkit"
+    }
+  ]
+}
