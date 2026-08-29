@@ -1,0 +1,24 @@
+{
+  "version": 3,
+  "configurePresets": [
+    {
+      "name": "w64devkit",
+      "displayName": "w64devkit Environment (Ninja)",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/w64devkit",
+      "environment": {
+        "PATH": "C:/raylib/w64devkit/bin;$penv{PATH}"
+      },
+      "cacheVariables": {
+        "CMAKE_MAKE_PROGRAM": "C:/raylib/w64devkit/bin/ninja.exe",
+        "CMAKE_C_COMPILER": "C:/raylib/w64devkit/bin/gcc.exe"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "w64devkit",
+      "configurePreset": "w64devkit"
+    }
+  ]
+}
